@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/9de30e4937.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <span class="logo">
+                    Junaid's Portfolio
+                    </span>
+
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home1">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+
+                    <li><a href="#contact-us">Contact</a></li>
+                    <li onclick="showSideBar()" class="menu-button" ><a href="#" aria-label="Open Menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </div>
+                <div class="sidebar">
+                    <ul>
+                        <li onclick="hideSideBar()" ><a href="#" aria-label="Close Menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a> </li>
+                        <li><a href="#home1">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact-us">Contact</a></li>
+                    </ul>
+                </div>
+
+           
+        </nav>
+    </header>
+    <main>
+        <section id="home1" class="first">
+            <div class="left-section">
+                <div class="intro1">
+                Hello, I'm <span class="purple">Muhammad Junaid</span></div>
+                <div class="intro2">and I'm a passionate <span id="text-change"> Web Developer</span></div>
+            </div>
+            <div class="right-section">
+                <img  src="/Assets/me-img1.png" alt="img" id="pro-img">
+                
+            </div>
+            
+        </section>
+        <hr>
+        <!-- About Section -->
+
+        <section id="about" class="second">
+           <div class="heading-about">
+                <h1 id="heading-about">About Me</h1>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <span id="about-heading">  I'm a <span class="purple-text1" id="text-change2">Front-End Developer </span></span>
+                                
+                            </div>
+                            <span id="about-line"></span>
+                                    <div id="about-intro">
+                                        Currently I'm a student, A passion for creating innovative web solutions. I specialize in <span class="purple-text1">front-end</span> and <span class="purple-text1">video editing,</span> using modern technologies and best practices to build responsive and user-friendly applications.
+                                    </div>
+                        
+                
+                    </div>
+           </div>
+        </section>
+<hr>
+        <!-- Services -->
+        <section id="Services">
+            <div class="container-services">
+                <h1 class="services-heading">My Services</h1>
+                <div class="services-list">
+                    <div class="service1">
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>I develop high-quality, responsive websites using HTML, CSS, and JavaScript.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div class="service2">
+                        <i class="fa-solid fa-video"></i>
+                        <h2>Video Editing</h2>
+                        <p>I specialize in editing videos, including transitions, cuts, and effects.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div class="service3">
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>I create visually appealing and user-friendly interfaces for your applications.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- projects -->
+        <section id="projects">
+            <div class="container-projects">
+                <h1 class="projects-heading">Projects</h1>
+                <div class="projects-list">
+                    <div class="project-completed">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <h3>Completed</h3>
+                        <p>7+ Finished projects</p>
+                    </div>
+                    <div class="project-client">
+                        <i class="fa-solid fa-user"></i>
+                        <h3>Clients</h3>
+                        <p>4+ Happy Clients</p>
+                    </div>
+                    <div class="project-experience">
+                        <i class="fa-solid fa-award"></i>
+                        <h3>Experience</h3>
+                        <p> Beginner </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<hr>
+        <!-- Contact -->
+         <section id="contact-us">
+            <div class="heading-contact">
+                <h1 id="heading-contact1">Contact Us</h1>
+            </div>
+            <div class="form-container">
+                <div class="contact-info">
+                    <h3>Connect with me </h3>
+                    <p id="contact-p">Contact me today to bring your project to life.</p>
+                    <p><img src="Assets/blue-phone-7152.png" alt="">Phone: +92 316 459 xxxx.</p>
+                    <p><img src="/Assets/mail-5924.png" alt="">Email: junaid.aurangzb1@gmail.com.</p>
+                    <p><img src="/Assets/location-2955.png" alt="">Peshawar KPK Pakistan</p>
+                    <!-- -------------- -->
+                    <div class="rounded-social-buttons">
+                        <a class="social-button facebook" href="https://web.facebook.com/profile.php?id=100009265155503" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a class="social-button instagram" href="https://www.instagram.com/muhammad.junaid1" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="social-button whatsapp" href="https:wa.me/923164593159" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <!-- -------------------------- -->
+
+                </div>
+            <div class="contact-form">
+                <h2>✉ Send me a message </h2>
+                <form action="">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="✉ Message" required></textarea>
+                    <button type="submit">Send message</button>
+                </form>
+                
+                </div>
+            </div>
+        </section>
+            
+    </main>
+    
+    
+    <script src="Script.js"></script>
+</body>
+</html>

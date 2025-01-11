@@ -1,0 +1,805 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(4, 4, 65);
+font-family: "Poppins", serif;
+font-weight: 400;
+font-style: normal;
+color: white;
+text-shadow: 1px 1px 4px black;
+
+}
+#home1{
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+background-color: rgb(14, 14, 114);
+padding: 10px;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 100;
+}
+nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 40px;
+
+}
+nav ul{
+list-style: none;
+display: flex;
+justify-content: center;
+}
+nav ul li{
+margin: 0 23px;
+}
+nav ul li a{
+text-decoration: none;
+color: white;
+}
+.left{
+font-size: 1.5rem;
+}
+nav a:hover{
+color: blueviolet;
+font-size: large;
+font-weight: bold;
+
+}
+
+.sidebar{
+width: 250px;
+background-color: rgba(255, 255, 255, 0.337);
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.512);
+position: fixed;
+top: 0;
+right: 0;
+height: 100vh;
+z-index: 999;
+display: none;
+flex-direction: column;
+justify-content: flex-start;
+backdrop-filter: blur(10px);
+transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+.sidebar ul{
+display: flex;
+flex-direction: column;
+gap: 24px;
+margin-top: 18px;
+}
+.sidebar a {
+width: 100%;
+display: inline-block;
+}
+.menu-button{
+display: none;
+margin: 0;
+padding: 0;
+margin-top: -3px;
+
+}
+@media(max-width: 600px) {
+nav .right > ul li:not(.menu-button) {
+display: none;
+}
+}
+@media(max-width: 700px) {
+nav .right > ul li:not(.menu-button) {
+display: none; 
+}
+.menu-button {
+display: block; 
+}
+}
+
+@media(max-width: 500px) {
+.sidebar {
+width: 100%;
+}
+.right-section img{
+    width: 100px;
+}
+}
+.first {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.left-section {
+    width: 35%;
+}
+
+/* Base font size for mobile */
+.left-section {
+    font-size: 1.5rem; /* Default size for mobile */
+}
+
+/* Larger font size for desktop */
+@media (min-width: 768px) {
+    .left-section {
+        font-size: 2.5rem;
+    }
+}
+
+/* Even larger for very wide screens if desired */
+@media (min-width: 1200px) {
+    .left-section {
+        font-size: 2.7rem;
+        margin-top: 10px;
+    }
+}
+
+.left-section span   {
+    color: rgb(184, 123, 241);
+}
+
+/* Make layout responsive for mobile */
+@media (max-width: 700px) {
+    .first {
+        flex-direction: column;
+        margin: 90px 0;
+    }
+    
+    .left-section {
+        padding-top: 100px;
+        width: 90%; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .right-section img {
+        justify-self: center;
+        margin: 0 auto;
+
+    }
+}
+.right-section img{
+    width: 100%;
+    max-width: 750px;
+    
+}
+
+main {
+   
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    height: 100vh;
+    width: 100vw;
+    -webkit-overflow-scrolling: touch;
+    
+    
+
+    
+}
+
+section {
+    padding-top: 100px;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always; /* Ensure the snap stops at each section */
+    max-width: 100vw;
+}
+#hr{
+    border: 0;
+    background-color: white;
+    height: 3px;
+}
+
+.second {
+    background-color: 11071F  ;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+/* Base font size for mobile */
+.second h1 {
+    font-size: 1.8rem; /* Smaller size for mobile */
+}
+
+#about-heading {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: -10px;
+}
+
+#about-line, #about-intro {
+    font-size: 1.2rem;
+}
+.about-text{
+    margin-bottom: 30px;
+}
+.purple-text1{
+    color: rgb(184, 123, 241)
+
+}
+
+/* Larger font size for tablets and small desktops */
+@media (min-width: 768px) {
+    .second{
+        width: 100%;
+        align-items: start;
+        padding: 0 90px;
+        
+    }
+    .second h1 {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    
+    #about-heading {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    #about-line, #about-intro {
+        font-size: 1.4rem;
+    }
+}
+
+/* Even larger font size for wide screens */
+@media (min-width: 1200px) {
+    .second h1 {
+        font-size: 3rem;
+    }
+    
+    #about-heading {
+        font-size: 2.5rem;
+    }
+
+    #about-line, #about-intro {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 700px) {
+    .second {
+        width: 100vw;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .second h1 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    #about-heading, #about-line, #about-intro {
+    text-align: center;
+    }
+    .about-text{
+        margin: 30px 0;
+    }
+}
+#contact-us {
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-container {
+    display: flex;
+    flex: 1;
+}
+.contact-info{
+    flex: 1.7;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+.contact-form h2{
+    font-size: 1.5rem;
+    margin: 7px 0 20px 0;
+}
+.contact-form form input{
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0 15px 0;
+    border-radius: 20px;
+}
+.contact-form form textarea{
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0 15px 0;
+    border-radius: 20px;
+    height: 140px;
+}
+.contact-form form button{
+        width: 150px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: white;
+        
+        background-color: rgb(139, 22, 218);
+        font-size: 1rem;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: ease 0.5s;
+        
+        
+}
+.contact-form form button:hover{
+    transform: scale(1.1);
+    background-color:rgb(145, 64, 221);
+}
+/* ---------------------- */
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-tiktok, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+  margin:0 5px;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+  margin:0 5px;
+}
+
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+  margin:0 5px;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.tiktok {
+  background: #000000;
+  margin:0 5px;
+}
+
+.rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+
+
+.rounded-social-buttons .social-button.instagram {
+  background: #e91b6a;
+  margin:0 5px;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #e61a79;
+  background: #fefefe;
+  border-color: #125688;
+}
+.rounded-social-buttons .social-button.whatsapp {
+    background: #05a005;
+    margin:0 5px;
+  }
+.rounded-social-buttons .social-button.whatsapp:hover, .rounded-social-buttons .social-button.whatsapp:focus {
+    color: #2de464;
+    background: #fefefe;
+    border-color: #36cc30;
+  }
+.rounded-social-buttons{
+    padding: 20px;
+    margin: 30px 10px 20px 10px;
+    
+}
+#heading-contact1{
+    font-size: 2.5rem;
+    text-align: left;
+    margin-top: 30px 0 30px 0;
+    padding: 10px;
+}
+.contact-info{
+    font-size: 1.3rem;
+}
+.contact-info #contact-p{
+    margin-bottom: 30px;
+}
+/* Mobile Styles */
+@media (max-width: 767px) {
+ #contact-us{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+    }
+  
+    .form-container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .contact-info {
+      flex: none;
+      padding: 20px 0; /* Reduce vertical padding */
+      border-top: 1px solid #ccc;
+      border-right: none;
+    }
+  
+    .contact-form {
+      flex: none;
+      padding: 20px 0; /* Reduce vertical padding */
+    }
+  
+    .contact-form form input,
+    .contact-form form textarea {
+      width: 100%;
+      padding: 10px; /* Reduce input padding */
+    }
+  
+    .contact-form form button {
+      width: 30%;
+      margin-right: 20px;
+      height: 40px; /* Reduce button height */
+      font-size: 0.8rem; /* Reduce button font size */
+    }
+  
+    .rounded-social-buttons {
+      padding: 5px 0; /* Reduce vertical padding */
+      margin: 4px 0;
+      /* display: none; */
+    }
+  
+    .rounded-social-buttons .social-button {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.25rem;
+      line-height: 1.75em;
+    }
+  
+    .rounded-social-buttons .fa-twitter,
+    .fa-facebook-f,
+    .fa-linkedin,
+    .fa-tiktok,
+    .fa-instagram {
+      font-size: 20px;
+    }
+  
+    #heading-contact1 {
+        position: relative;
+        top: 10px;
+
+        padding: auto;
+      font-size: 1.5rem;
+      text-align: center; /* Center the heading */
+    }
+  
+    .contact-info {
+      font-size: 0.8rem;
+      text-align: center; /* Center the contact info */
+    }
+  
+    .contact-info #contact-p {
+      margin-bottom: 10px;
+    }
+    #contact-p{
+        display: none;
+      }
+      .contact-info h3{
+        display: none;
+      }
+      .contact-form form textarea{
+        width: 100%;
+    padding: 3px 10px ;
+    font-size: 1rem;
+    margin: 5px 0 5px 0;
+    border-radius: 20px;
+    height: 70px;
+
+      }
+    .form-container p{
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+        margin-top: -10px;
+    }
+    .form-container img{
+        width: 16px;
+        margin: 0;
+    }
+    .rounded-social-buttons .social-button {
+        width: 2.125rem;
+        height: 2.125rem;
+        border: 0.125rem solid transparent;
+        padding: 0;
+        text-decoration: none;
+        text-align: center;
+        color: #fefefe;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 1.6875rem;
+        transition: all 0.5s ease;
+        margin-bottom: 0;
+      }
+      .contact-form h2{
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    
+  }
+/* --------------------services------------------------------------- */
+#Services {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-services {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    
+}
+
+.services-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service1, .service2, .service3 {
+    background: #262626;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1;
+}
+
+.service1:hover, .service2:hover, .service3:hover {
+    transform: translateY(-20px);
+    background-color: #4e4e4e;
+}
+
+.service1 i, .service2 i, .service3 i {
+    font-size: 50px;
+    padding-bottom: 5px;
+}
+.service1 a, .service2 a, .service3 a{
+    color:#1E90FF;
+}
+
+.service1 h2, .service2 h2, .service3 h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service1 p, .service2 p, .service3 p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 700px) {
+    .services-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container-services {
+        width: 95%;
+        padding: 2rem 0;
+    }
+
+    .services-heading {
+        font-size: 1.5rem;
+
+        padding-top: 60px; 
+    }
+        .service1 h2, .service2 h2, .service3 h2{
+            font-size: 1rem;
+
+        }
+
+    .service1, .service2, .service3 {
+        padding: 1rem;
+    }
+
+    /* Ensure the section fits in mobile viewport */
+    #Services {
+        min-height: 100vh;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .service1 i, .service2 i, .service3 i {
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    
+}
+/* -------------------------projects---------------------------------- */
+#projects{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-projects{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.projects-heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+.projects-list{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.project-completed ,.project-client, .project-experience{
+    background: #252424;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1;
+    aspect-ratio: 4/3;
+}
+.project-completed:hover, .project-client:hover, .project-experience:hover{
+    transform: translateY(-20px);
+}
+.project-completed i , .project-client i, .project-experience i{
+    font-size: 50px;
+    padding-bottom: 5px;
+    color:black;
+    backdrop-filter: blur(50px);
+}
+.project-completed h3, .project-client h3, .project-experience h3{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color:black;
+    backdrop-filter: blur(50px);
+}
+.project-completed p, .project-client p, .project-experience p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color:black;
+    font-weight: bold;
+    backdrop-filter: blur(50px);
+    text-decoration-line: underline;
+}
+@media screen and (max-width: 700px){
+    .projects-list{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .container-projects{
+        width: 85%;
+        padding: 2rem 0;
+
+    }
+    .projects-heading{
+        font-size: 1.5rem;
+        padding-top: 60px;
+        text-align: center;
+    }
+    .project-completed, .project-client, .project-experience{
+        padding: 1rem;
+    }
+    #projects{
+        min-height: 100vh;
+        height: auto;
+        padding: 2rem 0;
+    }
+    .project-completed i, .project-client i, .project-experience i{
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    
+}
+.project-completed{
+    background-image: url("Assets/1Yx6107E92Rm24yp6H-ezgif.com-video-to-gif-converter.gif");
+    background-size: cover;
+}
+.project-client{
+    background-image: url("Assets/clients.gif");
+    background-size: cover;
+}
+.project-experience{
+    background-image: url("Assets/user-experience.gif");
+    background-size: cover;
+}
+/* -------------------------img---------------------------------- */
+#pro-img {
+    border-radius: 15px;
+    filter: drop-shadow(0px 8px 25px rgba(0, 255, 255, 0.6));
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  #pro-img:hover {
+    filter: drop-shadow(0px 10px 30px rgba(0, 255, 255, 0.9));
+  }
+  
