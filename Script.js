@@ -243,6 +243,32 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   };
+    // --------------------
+    const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  try {
+    const response = await fetch('https://formspree.io/f/mannakqw', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+      },
+      body: new FormData(event.target),
+    });
+
+    if (response.ok) {
+      alert('Email sent successfully!');
+      form.reset();
+    } else {
+      alert('Error sending email. Please try again later.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again later.');
+  }
+});
 
   // IntersectionObserver options
   const observerOptions = {
